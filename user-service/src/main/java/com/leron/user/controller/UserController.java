@@ -1,5 +1,6 @@
 package com.leron.user.controller;
 
+import com.leron.user.dto.ResponseTemplateDto;
 import com.leron.user.model.User;
 import com.leron.user.service.UserService;
 import lombok.extern.slf4j.Slf4j;
@@ -23,15 +24,16 @@ public class UserController {
     }
 
     @GetMapping("/{id}")
-    public User findUserById(@PathVariable("id") Long id) {
-        log.info("Inside find by Id of user controller");
-        return userService.findUserById(id);
+    public ResponseTemplateDto getUserWithDepartment( @PathVariable("id") Long id) {
+        return userService.getUserWithDepartment(id);
     }
+
 
     @GetMapping
     public List<User> findAllUsers() {
         log.info("Inside find all users of controller");
         return userService.findAllUsers();
     }
+
 
 }
