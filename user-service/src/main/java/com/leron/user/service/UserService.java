@@ -36,7 +36,6 @@ public class UserService {
         User user = userRepository.findUserById(id);
 
         Department department = restemplate.getForObject("http://localhost:9000/departments/" + user.getDepartmentId(), Department.class);
-
         dto.setUser(user);
         dto.setDepartment(department);
         return dto;
