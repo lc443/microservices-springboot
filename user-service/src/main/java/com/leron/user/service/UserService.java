@@ -4,6 +4,7 @@ import com.leron.user.dto.Department;
 import com.leron.user.dto.ResponseTemplateDto;
 import com.leron.user.model.User;
 import com.leron.user.repository.UserRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -11,6 +12,7 @@ import org.springframework.web.client.RestTemplate;
 import java.util.List;
 
 @Service
+@Slf4j
 public class UserService {
 
     @Autowired
