@@ -37,7 +37,7 @@ public class UserService {
         ResponseTemplateDto dto = new ResponseTemplateDto();
         User user = userRepository.findUserById(id);
 
-        Department department = restemplate.getForObject("http://localhost:9000/departments/" + user.getDepartmentId(), Department.class);
+        Department department = restemplate.getForObject("http://DEPARTMENT-SERVICE/departments/" + user.getDepartmentId(), Department.class);
         dto.setUser(user);
         dto.setDepartment(department);
         return dto;
