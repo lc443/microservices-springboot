@@ -1,5 +1,7 @@
 
 spring:
+  application:
+    name: DEPARTMENT-SERVICE
   datasource:
     url: jdbc:postgresql://localhost:5432/MicroServiceDatabase
     username: postgres
@@ -18,3 +20,13 @@ spring:
 
 server:
   port: 9001
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      default-zone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
+
